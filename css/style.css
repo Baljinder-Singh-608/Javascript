@@ -1,0 +1,99 @@
+body {
+    font-family: Arial;
+    color: #333;
+    font-size: 14px;
+    background: url(../img/main-bg.jpg) no-repeat left top;
+}
+
+div::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+button{border:1px solid #a4a4a4; text-align:center; padding-top:20px; background:#FFFFFF; font-size:18px; color:#666666; padding:0px 25px; width:150px; max-width:100%; border-radius:35px; line-height:40px; text-transform:uppercase; box-shadow:0 3px 7px rgba(0, 0, 0, 0.05); -moz-box-shadow:0 3px 7px rgba(0, 0, 0, 0.05); -webkit-box-shadow:0 3px 7px rgba(0, 0, 0, 0.05); -o-box-shadow:0 3px 7px rgba(0, 0, 0, 0.05); -ms-box-shadow:0 3px 7px rgba(0, 0, 0, 0.05); float: right; cursor: pointer;}
+button:hover{background:#00abb9; color:#FFFFFF}
+button:disabled, button:disabled:hover {
+    cursor: default;
+    background: #d4d4d4;
+    color: #999;
+    opacity: 0.5;
+  }
+
+#outer{
+    border: 1px solid #1cb7b3;
+    max-width: 80%;
+    height: 400px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 20px;
+    padding-top: 85px;
+    overflow: hidden;
+    background: #fff;
+}
+.header{
+    padding: 20px;
+    background-color: #003d4d;
+    position: absolute;
+    width: calc(100% - 40px);
+    top: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.header > span:first-child{
+    padding-right: 50px;
+}
+#time, #score{
+    border:1px solid #a4a4a4;
+    padding: 5px;
+    border-radius: 5px;
+    min-width: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+}
+.header > button{
+    margin-left: auto;
+}
+.game-panel {
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+}
+.game-panel > img{
+    max-width: 50px;
+    position: absolute;
+}
+
+/* Modal css */
+#overlay{background-color: #333; opacity: 0.75; position: fixed; top: 0; left: 0; bottom: 0; right: 0; visibility: hidden;}
+.modal{
+    background-color: #31c6b0;
+    width: 400px;
+    height: 200px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -200px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    padding: 20px;
+}
+.modal .close{
+    background: url(../img/close-icon.png) no-repeat;
+    position: absolute;
+    right:15px;
+    top: 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+}
+.modal > div{
+    text-align: center;
+}
